@@ -8,14 +8,14 @@ const HealthBarWrapper = styled.div`
   display: flex;
   align-items: center;
   align-content: center;
-  margin:10px 5px;
+  margin:10px 25px;
 `
 
 const HealthBar = ({lifeState='100'}) => {
   return (
     <HealthBarWrapper>
       <Image outline='none' url={Heart} x='30px' y='30px'/>
-      <Header level='2' innerText={lifeState} margin='auto 10px'/>
+      <Header family="'Silkscreen', cursive" level='2' innerText={lifeState} margin='auto 10px 5px 10px'/>
     </HealthBarWrapper>
   )
 }

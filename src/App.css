@@ -149,3 +149,7 @@ undefined
 .iconGroup{
   margin:auto 40px !important;
 }
+/* NAVBAR */
+.nav-link,.logoUrl{
+  color: white;
+}

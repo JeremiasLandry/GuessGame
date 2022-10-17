@@ -13,6 +13,12 @@ import { GameProvider } from './context/GameContext'
 import { StatsProvider } from './context/StatsContext'
 import { GameContext } from './context/GameContext'
 import Background from './components/atoms/Background/Background';
+import Footer from './components/organism/Footer/Footer';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './components/pages/Home/Home';
+import HowToPlay from './components/pages/HowToPlay/HowToPlay';
+import Info from './components/pages/Info/Info';
+
 
 function App() {
 
@@ -20,14 +26,21 @@ function App() {
     <>
     <GameProvider>
       <StatsProvider>
-        {/* app */}
-        <div className="mainContainer">
-          <Navbar/>
-          <ScreenContainer/>
-          <Hud/>
-        </div>
-        {/* background */}
-        <Background/>
+        <BrowserRouter>
+          {/* app */}
+          <div className="mainContainer">
+            <Navbar/>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/howtoplay' element={<HowToPlay/>}/>
+              <Route path='/info' element={<Info/>}/>
+              <Route path='*' element={<Navigate to='/'/>}/>
+            </Routes>
+            <Footer/>
+          </div>
+          {/* background */}
+          <Background/>
+        </BrowserRouter>
       </StatsProvider>
     </GameProvider>
     </>

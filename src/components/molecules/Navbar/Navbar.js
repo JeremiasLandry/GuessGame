@@ -6,6 +6,7 @@ import Image from '../../atoms/Image/Image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faQuestion } from '@fortawesome/free-solid-svg-icons'
 import { faChartBar } from '@fortawesome/free-solid-svg-icons'
+import { Link, NavLink } from 'react-router-dom';
 
 const NavWrapper = styled.div`
     display:flex;
@@ -32,9 +33,17 @@ const NavWrapper = styled.div`
 const Navbar = () => {
   return (
     <NavWrapper>
-        <FontAwesomeIcon icon={faQuestion} fade={true} className='iconGroup'/>
-        <Image url={logo} x='50px' y='50px'/>
-        <FontAwesomeIcon icon={faChartBar} fade={true} className='iconGroup'/>
+        <NavLink className="nav-link" aria-current='page' to='/howtoplay'>
+          <FontAwesomeIcon className="nav-link iconGroup" icon={faQuestion} fade={true} />
+        </NavLink>
+
+        <Link className="logoUrl" aria-current='page' to='/'>
+          <Image className="logoUrl iconGroup" url={logo} x='50px' y='50px'/>
+        </Link>
+
+        <NavLink className="nav-link" aria-current='page' to='/info'>
+          <FontAwesomeIcon className="nav-link iconGroup" icon={faChartBar} fade={true}/>
+        </NavLink>
     </NavWrapper>
   )
 }

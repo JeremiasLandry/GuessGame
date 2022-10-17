@@ -3,11 +3,13 @@ import { GameContext } from '../../../context/GameContext';
 import { StatsContext } from '../../../context/StatsContext';
 import styled from 'styled-components';
 import { AllGames } from '../../../data/Data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faArrowRightLong} from '@fortawesome/free-solid-svg-icons';
 
 const InputStyle = styled.input`
     outline: none;
     border:none;
-    margin: 5px;
+    margin: 5px 25px;
     padding:10px;
     border-radius:10px;
 `
@@ -22,15 +24,22 @@ const SendButton = styled.button`
     background-color:#000;
     color: #fff;
     border-radius:7px;
-    padding:9px;
+    padding:8px;
     cursor: pointer;
+    margin-left:-60px;
+    transition: transform .2s ease-in-out;
+    &:hover{
+        transform:scale(.90,.90)
+    }
 `
 
 const ResultWrapper = styled.p`
     background-color:#F4F4F4;
     padding: 10px;
     border-radius:10px;
-    margin: 5px;
+    margin: 5px 25px;
+    margin-right:-5px;
+    margin-left:30px
     cursor: pointer;
     &:hover{
         background-color: #8584B6;
@@ -80,7 +89,7 @@ const InputContainer = () => {
                             onChange={(e) => setInput(e.target.value)} 
                             value={input} 
                         />
-                        <SendButton type='submit'>ENVIAR</SendButton>
+                        <SendButton type='submit'><FontAwesomeIcon icon={faArrowRightLong}/></SendButton>
                     </div>
                     {
                         AllGames.map((val, key) =>{

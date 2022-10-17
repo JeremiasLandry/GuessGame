@@ -8,13 +8,14 @@ const HitsWrapper = styled.div`
     display: flex;
     align-items: center;
     align-content:center;
-    margin:10px 5px;
+    margin:10px 25px;
+    margin-left:40px;
 `
 
 const Hits = ({HitStrike='0'}) => {
   return (
     <HitsWrapper>
-        <Header level='2' margin='0 10px' innerText={HitStrike}/>
+        <Header family="'Silkscreen', cursive" level='2' margin='0 10px 3px 10px' innerText={HitStrike}/>
         <Image outline='none' url={hits} x='80px' y='20px'/>
     </HitsWrapper>
   )
