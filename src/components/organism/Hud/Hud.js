@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import InputContainer from '../../molecules/InputContainer/InputContainer'
 import HitsContainer from '../../molecules/HitsContainer/HitsContainer'
 import {StatsContext} from '../../../context/StatsContext'
+import RecordContainer from '../../molecules/RecordContainer/RecordContainer'
 
 const HudWrapper = styled.div`
     display: flex;
@@ -29,6 +30,7 @@ const Hud = () => {
         <HealthBar lifeState={life}/>
         <InputContainer/>
         <HitsContainer/>
+        <RecordContainer/>
     </HudWrapper>
   )
 }

@@ -44,6 +44,7 @@ const ResultWrapper = styled.p`
     &:hover{
         background-color: #8584B6;
         color: #fff;
+        cursor:pointer;
     }
 `
 
@@ -66,7 +67,7 @@ const InputContainer = () => {
             setHits(parseInt(hits) + 1)
             setInput('')
             if(hits >= record){
-                setRecord(hits)
+                setRecord(hits + 1)
             }
         }else{
             setInput('')

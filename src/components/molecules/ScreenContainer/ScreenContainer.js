@@ -5,6 +5,7 @@ import { useContext, useEffect} from 'react';
 import { AllGames } from '../../../data/Data';
 import styled from 'styled-components';
 import Image from '../../atoms/Image/Image';
+import LoseSign from '../LoseSign/LoseSign';
 
 const ImageWrapper = styled.div`
     margin-bottom: 30px;
@@ -27,7 +28,7 @@ const ScreenContainer = () => {
         )
     }
 
-    return(<div><h1>Perdiste</h1></div>)
+    return(<><LoseSign/></>)
 }
 
 export default ScreenContainer

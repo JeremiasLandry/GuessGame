@@ -8,11 +8,12 @@ const ImageStyle = styled.img`
     width:${props => props.x ? props.x : '900px'};
     border-radius:${props => props.br ? props.br : 'none'};
     outline:${props => props.outline ? props.outline : "2px solid #fff"};
+    margin:${props => props.margin ? props.margin : "auto"};
 `
 
-const Image = ({url, x='900px', y='900px', outline, br}) => {
+const Image = ({url, x='1000px', y='1000px', outline, br, margin='auto'}) => {
   return (
-    <ImageStyle src={url} br={br} x={x} y={y} outline={outline}/>
+    <ImageStyle margin={margin} src={url} br={br} x={x} y={y} outline={outline}/>
   )
 }
 

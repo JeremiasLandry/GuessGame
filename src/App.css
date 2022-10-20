@@ -150,6 +150,19 @@ undefined
   margin:auto 40px !important;
 }
 /* NAVBAR */
-.nav-link,.logoUrl{
+.leftArrow,.nav-link,.logoUrl{
   color: white;
+}
+
+.leftArrow{
+  margin-right:10px;
+  transition: transform .2s ease-in-out;
+}
+.GoBack-LinkBtn{
+  text-decoration: none;
+  transition: text-decoration .2s ease-in-out;
+}
+.GoBack-LinkBtn:hover{
+  text-decoration:underline;
+  color:#fff;
 }
