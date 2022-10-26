@@ -14,8 +14,7 @@ const ImageWrapper = styled.div`
 
 const ScreenContainer = () => {
     const {life, hits} = useContext(StatsContext);
-    const {setGame, changeGame, game, playing} = useContext(GameContext);
-    const [ currentGame, setCurrentGame] = useState([]);
+    const {game, playing} = useContext(GameContext);
 
     useEffect(() => { 
         localStorage.setItem('game',JSON.stringify(game))
@@ -27,13 +26,6 @@ const ScreenContainer = () => {
         }
     },[playing])
  
-    // useEffect(()=>{
-    //     if(localStorage.getItem('game') !== null){
-    //         const localValue = JSON.parse(localStorage.getItem('game'))
-    //         setGame(localValue)
-    //     }
-    // })
-
     if(playing){
         return (
           <ImageWrapper>
