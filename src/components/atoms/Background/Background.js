@@ -10,6 +10,9 @@ const BgImage = styled.div`
     padding:0;
     width: 100%;
     height: 100%;
+    overflow-x:hidden;
+    max-width:100vw;
+    max-height:100vh;
     background:url(${props => props.bg ? props.bg : 'none'});
     background-size:cover;
     background-position: right center;
