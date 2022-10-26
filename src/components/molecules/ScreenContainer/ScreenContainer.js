@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StatsContext } from '../../../context/StatsContext';
 import { GameContext } from '../../../context/GameContext';
 import { useContext, useEffect} from 'react';
@@ -15,10 +15,24 @@ const ImageWrapper = styled.div`
 const ScreenContainer = () => {
     const {life, hits} = useContext(StatsContext);
     const {setGame, changeGame, game, playing} = useContext(GameContext);
+    const [ currentGame, setCurrentGame] = useState([]);
 
-    useEffect(() => {
-        setGame(changeGame(AllGames));
+    useEffect(() => { 
+        localStorage.setItem('game',JSON.stringify(game))
     },[hits, life])
+
+    useEffect(()=>{
+        if(playing === false){
+            localStorage.removeItem('life');
+        }
+    },[playing])
+ 
+    // useEffect(()=>{
+    //     if(localStorage.getItem('game') !== null){
+    //         const localValue = JSON.parse(localStorage.getItem('game'))
+    //         setGame(localValue)
+    //     }
+    // })
 
     if(playing){
         return (

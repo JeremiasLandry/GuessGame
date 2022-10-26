@@ -9,12 +9,20 @@ export const StatsProvider = ({children}) => {
 
     const [life, setLife] = useState(()=>{
         const stickyValue = window.localStorage.getItem('life');
+        if(stickyValue === null){
+          localStorage.setItem('life','100')
+        }
         return stickyValue !== null
           ? parseInt(stickyValue)
           : 100;
     });
 
-    const [hits, setHits] = useState(0);
+    const [hits, setHits] = useState(()=>{
+      const stickyValue = window.localStorage.getItem('hits');
+      return stickyValue !== null
+        ? parseInt(stickyValue)
+        : 0;
+    });
 
     const [record, setRecord] = useState(()=>{
         const stickyValue = window.localStorage.getItem('record');

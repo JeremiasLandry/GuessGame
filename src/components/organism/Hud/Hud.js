@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import Input from '../../atoms/Input/Input'
 import HealthBar from '../../molecules/HealthBar/HealthBar'
 import Hits from '../../molecules/Hits/Hits'
@@ -24,6 +24,11 @@ const HudWrapper = styled.div`
 
 const Hud = () => {
   const {life} = useContext(StatsContext);
+
+  useEffect(()=>{
+    localStorage.removeItem('life');
+    localStorage.setItem('life', life);
+  },[life])
 
   return (
     <HudWrapper>

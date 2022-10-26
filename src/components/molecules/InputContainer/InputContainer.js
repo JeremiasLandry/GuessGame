@@ -50,7 +50,7 @@ const ResultWrapper = styled.p`
 
 const InputContainer = () => {
     const [input, setInput] = useState("")
-    const { game, playing, setPlaying} = useContext(GameContext);
+    const { game, playing, setPlaying, changeGame, setGame} = useContext(GameContext);
     const { setHits, hits, record, setRecord, life, setLife} = useContext(StatsContext);
 
     const selectGame = (result) => {
@@ -59,23 +59,31 @@ const InputContainer = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-
+        setGame(changeGame(AllGames));
         console.log(input)
         console.log(game.title)
+
 
         if(input.toLowerCase() === game.title.toLowerCase()){
             setHits(parseInt(hits) + 1)
             setInput('')
+            localStorage.setItem('hits', hits + 1)
+
             if(hits >= record){
                 setRecord(hits + 1)
+                localStorage.setItem('record', record + 1)
             }
         }else{
             setInput('')
             if(parseInt(life) === 25){
                 setPlaying(false)
                 setLife(parseInt(life) - 25)
+                localStorage.removeItem('life')
+                localStorage.removeItem('hits')
             }else{
                 setLife(parseInt(life) - 25)
+                // localStorage.removeItem('life')
+                // localStorage.setItem('life', life)
             }
         }
     }
