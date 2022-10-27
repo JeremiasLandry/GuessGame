@@ -1,14 +1,14 @@
 /* BACKGROUND */
 
-@keyframes cube {
-  from {
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
-  }
-  to {
-      transform: scale(20) rotate(960deg) translate(-50%, -50%);
-      opacity: 0;
-  }
+*::-webkit-scrollbar{
+	width: 0.40rem;
+  margin-left:50px;
+}
+*::-webkit-scrollbar-track{
+	background-color:transparent;
+}
+*::-webkit-scrollbar-thumb{
+	background-color:white;
 }
 
 .background {
@@ -166,4 +166,10 @@ undefined
 .GoBack-LinkBtn:hover{
   text-decoration:underline;
   color:#fff;
+}
+/* RESULTS CONTAINER */
+.resultContainer{
+  overflow-y:scroll;
+  overflow-x:hidden;
+  padding-right: 20px;
 }

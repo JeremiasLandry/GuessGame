@@ -16,6 +16,7 @@ const InputStyle = styled.input`
 const InputWrapping = styled.div`
     display:flex;
     flex-direction:column;
+    max-height:250px;
 `
 
 const SendButton = styled.button`
@@ -100,6 +101,7 @@ const InputContainer = () => {
                         />
                         <SendButton type='submit'><FontAwesomeIcon icon={faArrowRightLong}/></SendButton>
                     </div>
+                    <div className='resultContainer'>
                     {
                         AllGames.map((val, key) =>{
                             if(input == ''){
@@ -110,6 +112,7 @@ const InputContainer = () => {
                             }
                         })
                     }
+                    </div>
                 </InputWrapping>
             </form>
             )
