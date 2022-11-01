@@ -6,8 +6,9 @@ const FooterWrapper = styled.div`
     display:flex;
     justify-content:space-between;
     align-content:center;
-    position:fixed;
+    position:absolute;
     bottom:0;
+    left:0;
     width:96%;
     margin:2%;
     
