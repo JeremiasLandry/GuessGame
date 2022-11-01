@@ -15,13 +15,17 @@ const InputStyle = styled.input`
     @media screen and (max-width:568px){
         margin:0px !important;
         margin-right:20px;
-        max-width:100px;
+        max-width:150px;
+        overflow:hidden;
     }
 `
 const InputWrapping = styled.div`
     display:flex;
     flex-direction:column;
     max-height:250px;
+    @media screen and (max-width:568px){
+        max-width:167px;
+    }
 `
 
 const SendButton = styled.button`
@@ -54,6 +58,10 @@ const ResultWrapper = styled.p`
         background-color: #8584B6;
         color: #fff;
         cursor:pointer;
+    }
+    @media screen and (max-width:568px){
+        margin-left:0;
+        margin-right:-10px;
     }
 `
 
