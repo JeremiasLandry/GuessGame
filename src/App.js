@@ -37,7 +37,6 @@ function App() {
                 <Route path='/info' element={<Info/>}/>
                 <Route path='*' element={<Navigate to='/'/>}/>
               </Routes>
-              <Footer/>
             </div>
             {/* background */}
             <Background/>

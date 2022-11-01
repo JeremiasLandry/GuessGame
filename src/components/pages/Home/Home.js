@@ -5,6 +5,7 @@ import { GameContext } from '../../../context/GameContext'
 import HitsContainer from '../../molecules/HitsContainer/HitsContainer'
 import RecordContainer from '../../molecules/RecordContainer/RecordContainer'
 import styled from 'styled-components'
+import Footer from '../../organism/Footer/Footer'
 
 const StatsContainer = styled.div`
   display:flex;
@@ -50,12 +51,14 @@ const Home = () => {
         </StatsContainer>
         <ScreenContainer/>
         <Hud/>
+        <Footer/>
       </>
     )
   }else{
     return(
       <>
         <ScreenContainer/>
+        <Footer/>
       </>
     )
   }

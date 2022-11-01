@@ -10,8 +10,7 @@ const FooterWrapper = styled.div`
     bottom:0;
     left:0;
     width:96%;
-    margin:2%;
-    
+    margin:2%;   
 `
 const LinkTo = styled.a`
   text-decoration:underline;
