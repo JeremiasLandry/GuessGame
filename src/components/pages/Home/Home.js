@@ -12,6 +12,30 @@ const StatsContainer = styled.div`
   max-width:800px;
   width:100%;
   margin-bottom:20px;
+
+  @media screen and (max-width:768px){
+    max-width:600px;
+  }
+
+  @media screen and (max-width:640px){
+    max-width:500px;
+    justify-content:center;
+  }
+
+  @media screen and (max-width:568px){
+    max-width:450px;
+  }
+  @media screen and (max-width:500px){
+    max-width:400px;
+  }
+  @media screen and (max-width:450px){
+    max-width:95%;
+    justify-content:space-around;
+
+  }
+  @media screen and (max-width:350px){
+    max-width:250px;
+  }
 `
 
 const Home = () => {

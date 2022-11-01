@@ -12,6 +12,11 @@ const InputStyle = styled.input`
     margin: 5px 25px;
     padding:10px;
     border-radius:10px;
+    @media screen and (max-width:568px){
+        margin:0px !important;
+        margin-right:20px;
+        max-width:100px;
+    }
 `
 const InputWrapping = styled.div`
     display:flex;
@@ -31,6 +36,9 @@ const SendButton = styled.button`
     transition: transform .2s ease-in-out;
     &:hover{
         transform:scale(.90,.90)
+    }
+    @media screen and (max-width:568px){
+        margin-left:-35px;
     }
 `
 

@@ -11,6 +11,10 @@ const HealthBarWrapper = styled.div`
   justify-content:flex-start;
   margin:0 25px;
   padding-top:10px;
+  @media screen and (max-width:568px){
+    margin:0;
+    padding-top:5px;
+  }
 `
 
 const HealthBar = ({lifeState='100'}) => {

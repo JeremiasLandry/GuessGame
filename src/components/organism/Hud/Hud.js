@@ -22,6 +22,27 @@ const HudWrapper = styled.div`
     border: 1px solid rgba(44, 44, 44, 0.15);
     max-width:800px;
     padding:10px 20px;
+
+    @media screen and (max-width:768px){
+      max-width:600px;
+    }
+
+    @media screen and (max-width:640px){
+      max-width:500px;
+    }
+
+    @media screen and (max-width:568px){
+      max-width:450px;
+    }
+    @media screen and (max-width:500px){
+      max-width:400px;
+    }
+    @media screen and (max-width:450px){
+      max-width:300px;
+    }
+    @media screen and (max-width:350px){
+      max-width:250px;
+    }
     
 `
 const LifeAndInput = styled.div`
@@ -31,6 +52,9 @@ const LifeAndInput = styled.div`
   align-content:center;
   justify-content:space-between;
   width:495px;
+  @media screen and (max-width:568px){
+    padding-right:0;
+}
   `
 
 const Hud = () => {

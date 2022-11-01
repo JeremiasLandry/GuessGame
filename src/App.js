@@ -11,7 +11,7 @@ import Hud from './components/organism/Hud/Hud';
 import ScreenContainer from './components/molecules/ScreenContainer/ScreenContainer';
 import { GameProvider } from './context/GameContext'
 import { StatsProvider } from './context/StatsContext'
-import { GameContext } from './context/GameContext'
+import { ResponsiveProvider } from './context/ResponsiveContext';
 import Background from './components/atoms/Background/Background';
 import Footer from './components/organism/Footer/Footer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -24,25 +24,27 @@ function App() {
 
   return (
     <>
-    <GameProvider>
-      <StatsProvider>
-        <BrowserRouter>
-          {/* app */}
-          <div className="mainContainer">
-            <Navbar/>
-            <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/howtoplay' element={<HowToPlay/>}/>
-              <Route path='/info' element={<Info/>}/>
-              <Route path='*' element={<Navigate to='/'/>}/>
-            </Routes>
-            <Footer/>
-          </div>
-          {/* background */}
-          <Background/>
-        </BrowserRouter>
-      </StatsProvider>
-    </GameProvider>
+    <ResponsiveProvider>
+      <GameProvider>
+        <StatsProvider>
+          <BrowserRouter>
+            {/* app */}
+            <div className="mainContainer">
+              <Navbar/>
+              <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/howtoplay' element={<HowToPlay/>}/>
+                <Route path='/info' element={<Info/>}/>
+                <Route path='*' element={<Navigate to='/'/>}/>
+              </Routes>
+              <Footer/>
+            </div>
+            {/* background */}
+            <Background/>
+          </BrowserRouter>
+        </StatsProvider>
+      </GameProvider>
+    </ResponsiveProvider>
     </>
     )
 }
