@@ -10,6 +10,7 @@ import arrow from '../../../assets/images/rightArrow.jpg'
 import hits from '../../../assets/images/htp_hits.jpg'
 import gameover from '../../../assets/images/htp_gameover.jpg'
 import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive'
 
 const HtpWrapper = styled.div`
   display:grid;
@@ -23,6 +24,36 @@ const HtpWrapper = styled.div`
   grid-template-columns:20% 80%;
   padding:50px;
   margin-bottom:200px;
+  @media screen and (max-width:768px){
+    max-width:550px;
+    font-size:.8em
+  }
+  @media screen and (max-width:650px){
+    max-width:450px;
+    font-size:.8em;
+  }
+  @media screen and (max-width:550px){
+    max-width:350px;
+    font-size:.7em;
+    padding:20px;
+  }
+  @media screen and (max-width:460px){
+    max-width:350px;
+    font-size:.7em;
+  }
+  @media screen and (max-width:400px){
+    max-width:300px;
+    font-size:.7em;
+  }
+  @media screen and (max-width:340px){
+    max-width:250px;
+    font-size:.65em;
+  }
+  @media screen and (max-width:290px){
+    max-width:200px;
+    font-size:.5em;
+  }
+  
 `
 const Headlines = styled.div`
   display:flex;
@@ -56,6 +87,9 @@ const ExampleColumn = styled.div`
   grid-row-start:2;
   grid-row-end:3;
   align-items:center;
+  @media screen and (max-width:550px){
+    margin-left:20px
+  }
 `
 const GoBack = styled.div`
   display:flex;
@@ -83,11 +117,20 @@ const HowToPlay = () => {
         <Image br='12px' url={gameover} x='50px' y='50px'/>
       </IconsColumn>
       <ExampleColumn>
-        <Header fontSize='1em' margin='auto 90px auto auto' innerText='Use the image provided to guess the name of the game.'/>
-        <Header fontSize='1em' margin='auto 90px auto auto' innerText='If you get a guess wrong a new image from another game is revealed and you lose 25 points of health.'/>
-        <Header fontSize='1em' margin='auto 90px auto auto' innerText='Leave the input blank and press Submit to skip to the next image, you will lose 25 points of health.'/>
-        <Header fontSize='1em' margin='auto 90px auto auto' innerText='Everytime you guess, the hit number increases, you have to break your max streak!'/>
-        <Header fontSize='1em' margin='auto 90px auto auto' innerText='If your health goes down to 0, you lose the game and your current hits.'/>
+        <MediaQuery minWidth={769}>
+          <Header fontSize='1em' margin='auto 90px auto auto' innerText='Use the image provided to guess the name of the game.'/>
+          <Header fontSize='1em' margin='auto 90px auto auto' innerText='If you get a guess wrong a new image from another game is revealed and you lose 25 points of health.'/>
+          <Header fontSize='1em' margin='auto 90px auto auto' innerText='Leave the input blank and press Submit to skip to the next image, you will lose 25 points of health.'/>
+          <Header fontSize='1em' margin='auto 90px auto auto' innerText='Everytime you guess, the hit number increases, you have to break your max streak!'/>
+          <Header fontSize='1em' margin='auto 90px auto auto' innerText='If your health goes down to 0, you lose the game and your current hits.'/>
+        </MediaQuery>
+        <MediaQuery maxWidth={768}>
+          <Header fontSize='1em' margin='auto' innerText='Use the image provided to guess the name of the game.'/>
+          <Header fontSize='1em' margin='auto' innerText='If you get a guess wrong a new image from another game is revealed and you lose 25 points of health.'/>
+          <Header fontSize='1em' margin='auto' innerText='Leave the input blank and press Submit to skip to the next image, you will lose 25 points of health.'/>
+          <Header fontSize='1em' margin='auto' innerText='Everytime you guess, the hit number increases, you have to break your max streak!'/>
+          <Header fontSize='1em' margin='auto' innerText='If your health goes down to 0, you lose the game and your current hits.'/>
+        </MediaQuery>
       </ExampleColumn>
     </HtpWrapper>
   )

@@ -11,6 +11,7 @@ const FooterWrapper = styled.div`
     left:0;
     width:96%;
     margin:2%;
+    padding-bottom:20px;
     @media screen and (max-width:800px){
       display:none;
     }   

@@ -1,6 +1,7 @@
 /* BACKGROUND */
 html,body{
   height:100%;
+  overflow:hidden;
 }
 
 *::-webkit-scrollbar{
@@ -13,6 +14,7 @@ html,body{
 *::-webkit-scrollbar-thumb{
 	background-color:white;
 }
+
 
 .background {
   position: fixed;
@@ -37,7 +39,7 @@ html,body{
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 8s ease-in forwards infinite;
 }
-undefined
+
 .background li:nth-child(0) {
   animation-delay: 0s;
   left: 10vw;
