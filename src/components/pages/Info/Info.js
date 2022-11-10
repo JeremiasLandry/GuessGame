@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import styled from 'styled-components'
 import Header from '../../atoms/Header/Header'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { ResponsiveContext } from '../../../context/ResponsiveContext'
 
 const InfoWrapper = styled.div`
   display:grid;
@@ -28,9 +29,22 @@ const InfoWrapper = styled.div`
     width:96%;
   }
   @media screen and (max-width:575px){
-    max-width:550px;
+    max-width:450px;
     padding:15px;
 
+  }
+  @media screen and (max-width:500px){
+    max-width:400px;
+    padding:15px;
+
+  }
+  @media screen and (max-width:415px){
+    max-width:315px;
+    padding:15px;
+  }
+  @media screen and (max-width:340px){
+    max-width:230px;
+    padding:15px;
   }
 `
 const InfoTitles = styled.div`
@@ -43,6 +57,9 @@ const InfoTitles = styled.div`
   grid-column-end:3;
   grid-row-start:1;
   grid-row-end:2;
+  @media screen and (max-width:768px){
+    font-size:.9em;
+  }
 `
 const GoBack = styled.div`
   display:flex;
@@ -71,16 +88,31 @@ const InfoColumn = styled.div`
     font-size:.7em
     justify-content:flex-start;
     align-content:flex-start;
-
   }
 
 `
 
 const Info = () => {
+  const { 
+    isBigger,
+    isLarge,
+    isMediumLarge,
+    isMedium,
+    isMediumSmall,
+    isSmall,
+    isExtraSmall 
+    } = useContext(ResponsiveContext)
+
   return (
     <InfoWrapper>
       <InfoTitles>
-        <Header innerText='About'/>
+        <Header 
+          innerText='About'
+          fontSize={isBigger ? '1.5em'
+                   : isLarge ? '1.2em'
+                   : isMediumLarge ? '.8em'
+                   : isMedium ? '.7em' : '.5em'}
+        />
         <Link className='GoBack-LinkBtn' aria-current='page' to='/'>
           <GoBack>
               <FontAwesomeIcon className='leftArrow' icon={faLongArrowLeft}/>
