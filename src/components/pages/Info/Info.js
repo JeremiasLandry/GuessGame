@@ -17,10 +17,27 @@ const InfoWrapper = styled.div`
   grid-template-columns:100%;
   padding:50px;
   margin-bottom:200px;
+  @media screen and (max-width:700px){
+    max-width:600px;
+    padding:25px;
+  }
+  @media screen and (max-width:650px){
+    max-width:550px;
+    padding:20px;
+    margin:20px 2% 200px 2%;
+    width:96%;
+  }
+  @media screen and (max-width:575px){
+    max-width:550px;
+    padding:15px;
+
+  }
 `
 const InfoTitles = styled.div`
   display:flex;
   justify-content:space-between;
+  height:auto;
+  width:100%;
   grid-area:headlines;
   grid-column-start:1;
   grid-column-end:3;
@@ -44,6 +61,19 @@ const InfoColumn = styled.div`
   grid-row-end:3;
   grid-column-start:1;
   grid-column-end:3;
+  @media screen and (max-width:768px){
+    font-size:.9em
+  }
+  @media screen and (max-width:700px){
+    font-size:.8em
+  }
+  @media screen and (max-width:600px){
+    font-size:.7em
+    justify-content:flex-start;
+    align-content:flex-start;
+
+  }
+
 `
 
 const Info = () => {
