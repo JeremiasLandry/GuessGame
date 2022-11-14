@@ -79,8 +79,8 @@ const InputContainer = () => {
         setGame(changeGame(AllGames));
         console.log(input)
         console.log(game.title)
-
-
+        window.scrollTo(0, 0);
+        
         if(input.toLowerCase() === game.title.toLowerCase()){
             setHits(parseInt(hits) + 1)
             setInput('')

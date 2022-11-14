@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import ScreenContainer from '../../molecules/ScreenContainer/ScreenContainer'
 import Hud from '../../organism/Hud/Hud'
 import { GameContext } from '../../../context/GameContext'
@@ -6,6 +6,7 @@ import HitsContainer from '../../molecules/HitsContainer/HitsContainer'
 import RecordContainer from '../../molecules/RecordContainer/RecordContainer'
 import styled from 'styled-components'
 import Footer from '../../organism/Footer/Footer'
+import { useLocation } from 'react-router-dom'; 
 
 const StatsContainer = styled.div`
   display:flex;
@@ -41,6 +42,13 @@ const StatsContainer = styled.div`
 
 const Home = () => {
   const {playing} = useContext(GameContext);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
 
   if(playing){
     return (

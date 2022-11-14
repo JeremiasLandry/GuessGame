@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Header from '../../atoms/Header/Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,7 @@ import heart from '../../../assets/images/htp_heart.jpg'
 import arrow from '../../../assets/images/rightArrow.jpg'
 import hits from '../../../assets/images/htp_hits.jpg'
 import gameover from '../../../assets/images/htp_gameover.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MediaQuery from 'react-responsive'
 
 const HtpWrapper = styled.div`
@@ -98,6 +98,13 @@ const GoBack = styled.div`
 `
 
 const HowToPlay = () => {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <HtpWrapper>
       <Headlines>

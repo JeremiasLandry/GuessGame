@@ -1,7 +1,7 @@
-import React,{ useContext } from 'react'
+import React,{ useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import Header from '../../atoms/Header/Header'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { ResponsiveContext } from '../../../context/ResponsiveContext'
@@ -93,6 +93,13 @@ const InfoColumn = styled.div`
 `
 
 const Info = () => {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const { 
     isBigger,
     isLarge,
