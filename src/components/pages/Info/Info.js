@@ -104,10 +104,7 @@ const Info = () => {
     isBigger,
     isLarge,
     isMediumLarge,
-    isMedium,
-    isMediumSmall,
-    isSmall,
-    isExtraSmall 
+    isMedium 
     } = useContext(ResponsiveContext)
 
   return (

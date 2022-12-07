@@ -120,7 +120,7 @@ const InputContainer = () => {
                     <div className='resultContainer'>
                     {
                         AllGames.map((val, key) =>{
-                            if(input == ''){
+                            if(input === ''){
                                 return <></>
                             }
                             else if(val.title.toLowerCase().includes(input.toLowerCase())){
