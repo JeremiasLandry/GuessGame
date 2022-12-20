@@ -1,6 +1,6 @@
 {
     "background.fullscreen": {
-        "image": "https://images6.alphacoders.com/119/1193347.jpg", // url of your image
+        "image": "https://images4.alphacoders.com/110/1103346.jpg", // url of your image
         // "image": ["https://pathtoimage.png"], // An array may be useful when set interval for carousel
         "opacity": 0.91, // 0.85 ~ 0.95 recommended
         "size": "cover", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`

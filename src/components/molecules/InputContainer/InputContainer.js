@@ -21,7 +21,8 @@ const InputStyle = styled.input`
 `
 const InputWrapping = styled.div`
     display:flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
+    align-items:flex-start;
     max-height:250px;
     @media screen and (max-width:568px){
         max-width:167px;
@@ -47,13 +48,17 @@ const SendButton = styled.button`
 `
 
 const ResultWrapper = styled.p`
+
     background-color:#F4F4F4;
     padding: 10px;
+    display:flex;
+    align-self:flex-end;
     border-radius:10px;
     margin: 5px 25px;
     margin-right:-5px;
     margin-left:30px
     cursor: pointer;
+    
     &:hover{
         background-color: #8584B6;
         color: #fff;
@@ -109,14 +114,6 @@ const InputContainer = () => {
         return (
             <form onSubmit={handleSubmit}>
                 <InputWrapping>
-                    <div>
-                        <InputStyle 
-                            type='text' 
-                            onChange={(e) => setInput(e.target.value)} 
-                            value={input} 
-                        />
-                        <SendButton type='submit'><FontAwesomeIcon icon={faArrowRightLong}/></SendButton>
-                    </div>
                     <div className='resultContainer'>
                     {
                         AllGames.map((val, key) =>{
@@ -128,6 +125,15 @@ const InputContainer = () => {
                             }
                         })
                     }
+                    </div>
+                    <div>
+                        <InputStyle 
+                            type='text' 
+                            onChange={(e) => setInput(e.target.value)} 
+                            value={input} 
+                            placeholder='Guess here...'
+                        />
+                        <SendButton type='submit'><FontAwesomeIcon icon={faArrowRightLong}/></SendButton>
                     </div>
                 </InputWrapping>
             </form>

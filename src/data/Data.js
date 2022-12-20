@@ -72,10 +72,6 @@ export const AllGames = [
         url:'/images/deathstranding.png'
     },
     {
-        title:'Death Stranding',
-        url:'/images/deathstranding.png'
-    },
-    {
         title:'Call of Duty Advanced Warfare',
         url:'/images/advancedwarfare.jpg'
     },

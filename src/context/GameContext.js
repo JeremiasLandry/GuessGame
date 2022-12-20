@@ -19,8 +19,6 @@ export const GameProvider = ({children}) => {
         : changeGame(AllGames);
   });
 
-    
-
   return (
     <GameContext.Provider value={{
         game,

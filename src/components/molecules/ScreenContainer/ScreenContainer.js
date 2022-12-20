@@ -32,8 +32,8 @@ const ScreenContainer = () => {
     if(playing){
         return (
           <ImageWrapper>
-              {isBigger ? <Image br='12px' y='auto' maxX='800px' url={game ? game.url : ''}/>
-              : isLarge ? <Image br='12px' y='auto' maxX='600px' url={game ? game.url : ''}/>
+              {isBigger ? <Image  y='auto' maxX='800px' url={game ? game.url : ''} br={game ? '20px' : '12px'}/>
+              : isLarge ? <Image br='20px' y='auto' maxX='600px' url={game ? game.url : ''}/>
               : isMediumLarge ? <Image br='12px' y='auto' maxX='500px' url={game ? game.url : ''}/>
               : isMedium ? <Image br='12px' y='auto' maxX='400px' url={game ? game.url : ''}/>
               : isMediumSmall ? <Image br='12px' y='auto' maxX='400px' url={game ? game.url : ''}/>

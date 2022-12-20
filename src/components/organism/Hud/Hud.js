@@ -14,12 +14,12 @@ const HudWrapper = styled.div`
     align-items: center;
     justify-content:center;
     align-content:center;
-    background: rgba(44, 44, 44, 0.81);
+    background: rgba(0, 0, 0, 0.84);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(44, 44, 44, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     max-width:800px;
     padding:10px 20px;
     margin-bottom:500px;

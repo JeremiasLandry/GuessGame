@@ -191,5 +191,8 @@ html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{
   overflow-y:scroll;
   overflow-x:hidden;
   padding-right: 20px;
-
+  position:absolute;
+  z-index:1000;
+  max-height: 200px; 
+  margin-bottom: 60px;
 }
