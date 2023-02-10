@@ -11,7 +11,7 @@ const InputStyle = styled.input`
     border:none;
     margin: 5px 25px;
     padding:10px;
-    border-radius:10px;
+    border-radius:0;
     @media screen and (max-width:568px){
         margin:0px !important;
         margin-right:20px;
@@ -34,13 +34,11 @@ const SendButton = styled.button`
     border:none;
     background-color:#000;
     color: #fff;
-    border-radius:7px;
     padding:8px;
     cursor: pointer;
     margin-left:-60px;
-    transition: transform .2s ease-in-out;
     &:hover{
-        transform:scale(.90,.90)
+        opacity:.5;
     }
     @media screen and (max-width:568px){
         margin-left:-35px;
@@ -53,15 +51,13 @@ const ResultWrapper = styled.p`
     padding: 10px;
     display:flex;
     align-self:flex-end;
-    border-radius:10px;
     margin: 5px 25px;
     margin-right:-5px;
     margin-left:30px
     cursor: pointer;
     
     &:hover{
-        background-color: #8584B6;
-        color: #fff;
+        opacity:.5;
         cursor:pointer;
     }
     @media screen and (max-width:568px){
@@ -77,6 +73,7 @@ const InputContainer = () => {
 
     const selectGame = (result) => {
         setInput(result)
+        handleSubmit()
     }
 
     const handleSubmit = (e) =>{
