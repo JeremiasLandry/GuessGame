@@ -133,7 +133,7 @@ const Info = () => {
         <Header textAlign='left' margin='10px auto 20px 10px' innerText='A game for gamers and casual gaming enjoyers alike, inspired by Wordle, Framed, and all the other spinoffs.'/>
         <Header textAlign='left' margin='10px auto 20px 10px' innerText='You can play as many times as you want and beat your own record!.'/>
         <Header textAlign='left' margin='10px auto 20px 10px' innerText='All rights go to the rightful owners - no copyright infringement intended.'/>
-        <Header fontSize='1em' textAlign='left' margin='120px auto 20px 10px' innerText='Contact me via email: jeremiaslandrycontact@gmail.com'/>
+        <Header fontSize='1em' textAlign='left' margin='120px auto 20px 10px' innerText='Contact us via email: kabaitcontact@gmail.com'/>
       </InfoColumn>
     </InfoWrapper>
   )

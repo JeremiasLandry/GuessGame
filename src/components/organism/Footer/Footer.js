@@ -24,7 +24,7 @@ const LinkTo = styled.a`
 const Footer = () => {
   return (
     <FooterWrapper>
-        <Header fontSize='1em' family="'Roboto Mono', monospace" level='5' innerText='Created by Jeremias Landry'/>
+        <Header fontSize='1em' family="'Roboto Mono', monospace" level='5' innerText='Created by Kabait'/>
         <LinkTo href='https://chardle.vercel.app'>
             <Header fontSize='1em' family="'Roboto Mono', monospace" level='5' innerText='Also play chardle here!'/>
         </LinkTo>
